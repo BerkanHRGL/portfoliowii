@@ -72,9 +72,15 @@ body {
 .channel-icon {
     width: 60px;
     height: 60px;
-    background: #ddd;
+    background: rgba(255, 255, 255, 0.2);
     border-radius: 10px;
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Empty channel styling */
