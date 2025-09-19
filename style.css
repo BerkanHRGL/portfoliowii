@@ -87,6 +87,70 @@ body {
     font-size: 12px;
 }
 
+/* Specific channel styles */
+.channel-card.projects {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.channel-card.projects .channel-text {
+    color: white;
+    font-weight: 600;
+}
+
+.channel-card.learning {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.channel-card.learning .channel-text {
+    color: white;
+    font-weight: 600;
+}
+
+.channel-card.reading {
+    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.channel-card.reading .channel-text {
+    color: white;
+    font-weight: 600;
+}
+
+.channel-card.about {
+    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+}
+
+.channel-card.about .channel-text {
+    color: white;
+    font-weight: 600;
+}
+
+.channel-card.contact {
+    background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+}
+
+.channel-card.contact .channel-text {
+    color: white;
+    font-weight: 600;
+}
+
+.channel-card.skills {
+    background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+}
+
+.channel-card.skills .channel-text {
+    color: #333;
+    font-weight: 600;
+}
+
+.channel-card.experience {
+    background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+}
+
+.channel-card.experience .channel-text {
+    color: #333;
+    font-weight: 600;
+}
+
 /* Bottom profile section */
 .bottom-profile {
     position: absolute;
