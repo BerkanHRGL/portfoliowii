@@ -51,6 +51,18 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
+.channel-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.15),
+        0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.channel-card:active {
+    transform: translateY(-2px) scale(1.01);
+    transition: all 0.1s ease;
+}
+
 .channel-content {
     display: flex;
     flex-direction: column;
@@ -81,6 +93,12 @@ body {
     font-size: 24px;
     color: white;
     border: 2px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+.channel-card:hover .channel-icon {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.3);
 }
 
 /* Empty channel styling */
