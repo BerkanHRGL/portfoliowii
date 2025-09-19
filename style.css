@@ -12,7 +12,19 @@ body {
     background-size: 20px 20px;
     height: 100vh;
     overflow: hidden;
-    cursor: none;
+    cursor: crosshair;
+}
+
+/* Custom cursor styling */
+.wii-menu::before {
+    content: "🎯";
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 20px;
+    pointer-events: none;
+    z-index: 9999;
+    transition: all 0.1s ease;
 }
 
 .wii-menu {
@@ -104,6 +116,12 @@ body {
 /* Empty channel styling */
 .channel-card.empty {
     background: rgba(255, 255, 255, 0.3);
+    opacity: 0.6;
+}
+
+.channel-card.empty:hover {
+    transform: translateY(-2px) scale(1.01);
+    opacity: 0.8;
 }
 
 .channel-card.empty .channel-text {
