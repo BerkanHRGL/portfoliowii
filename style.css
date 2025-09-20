@@ -70,95 +70,6 @@ body {
     transition: all 0.8s ease;
 }
 
-/* Large screens (25 inch and bigger) */
-@media screen and (min-width: 1920px) {
-    .channels-grid {
-        grid-template-columns: repeat(5, 350px);
-        gap: 35px;
-        width: 1750px;
-        height: 650px;
-        max-width: calc(100vw - 160px);
-    }
-
-    .wii-menu {
-        padding: 60px;
-        padding-left: 80px;
-    }
-
-    .wii-menu.project-view {
-        padding: 40px;
-    }
-
-    .project-page {
-        width: 1750px;
-        height: 750px;
-        max-width: calc(100vw - 160px);
-    }
-
-    .project-card {
-        padding: 40px;
-    }
-
-    .project-title {
-        font-size: 70px;
-    }
-
-    .project-description {
-        font-size: 16px;
-    }
-
-    .project-description h2 {
-        font-size: 20px;
-    }
-
-    .project-description h3 {
-        font-size: 18px;
-    }
-
-    .carousel-image-container {
-        max-width: 800px;
-    }
-
-    .carousel-image {
-        max-height: 500px;
-    }
-
-    .social-icons {
-        width: calc(100vw - 160px);
-        max-width: 1600px;
-        left: 80px;
-    }
-
-    .social-icon {
-        width: 60px;
-        height: 60px;
-    }
-
-    .social-img {
-        width: 35px;
-        height: 35px;
-    }
-
-    .bottom-profile {
-        bottom: 60px;
-    }
-
-    .profile-name {
-        font-size: 28px;
-    }
-
-    .profile-subtitle {
-        font-size: 14px;
-    }
-
-    .channel-text {
-        font-size: 20px;
-    }
-
-    .channel-subtitle {
-        font-size: 14px;
-    }
-}
 
 .channels-grid.fade-out {
     opacity: 0;
@@ -383,15 +294,16 @@ body {
 }
 
 /* Social icons */
-.social-icons {
+.social-icon.left {
     position: absolute;
     bottom: 40px;
-    width: calc(100vw - 120px);
-    max-width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    padding: 0;
     left: 60px;
+}
+
+.social-icon.right {
+    position: absolute;
+    bottom: 40px;
+    right: 60px;
 }
 
 .social-icon {
