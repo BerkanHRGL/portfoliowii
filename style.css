@@ -32,10 +32,11 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     position: relative;
     padding: 40px;
+    padding-left: 60px;
 }
 
 .channels-grid {
@@ -43,14 +44,15 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
-    width: 1000px;
+    width: calc(100vw - 120px);
+    max-width: 1200px;
     height: 450px;
     margin-bottom: 80px;
 }
 
 .channel-card {
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 30px;
+    border-radius: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -197,7 +199,8 @@ body {
 .bottom-profile {
     position: absolute;
     bottom: 100px;
-    text-align: center;
+    left: 60px;
+    text-align: left;
     background: rgba(255, 255, 255, 0.8);
     padding: 15px 25px;
     border-radius: 15px;
@@ -223,10 +226,12 @@ body {
 .social-icons {
     position: absolute;
     bottom: 40px;
-    width: 100%;
+    width: calc(100vw - 120px);
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0;
+    left: 60px;
 }
 
 .social-icon {
