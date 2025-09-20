@@ -607,3 +607,77 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
+
+/* Reading Guide Specific Styles */
+.learning-outcome-section {
+    margin: 30px 0;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.learning-outcome-section:last-of-type {
+    border-bottom: none;
+}
+
+.learning-outcome-section h2 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.learning-outcome-section h3 {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 15px 0 10px 0;
+    text-align: left;
+}
+
+.learning-outcome-section ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.learning-outcome-section li {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.learning-outcome-section strong {
+    color: #333;
+    font-weight: 600;
+}
+
+.reflection-section {
+    margin: 30px 0;
+    padding: 20px 0;
+    border-top: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.reflection-section h2 {
+    color: #333;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.reflection-section h3 {
+    color: #666;
+    font-size: 14px;
+    font-weight: 500;
+    margin: 20px 0 10px 0;
+    text-align: left;
+}
+
+.reflection-section ul {
+    padding-left: 20px;
+    margin: 15px 0;
+}
+
+.reflection-section li {
+    margin: 8px 0;
+    line-height: 1.5;
+}
