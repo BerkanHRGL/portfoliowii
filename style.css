@@ -43,14 +43,14 @@ body {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(3, 1fr);
     gap: 20px;
-    width: 900px;
-    height: 600px;
+    width: 1000px;
+    height: 450px;
     margin-bottom: 80px;
 }
 
 .channel-card {
     background: rgba(255, 255, 255, 0.9);
-    border-radius: 20px;
+    border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
