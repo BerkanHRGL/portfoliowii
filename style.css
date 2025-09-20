@@ -5,27 +5,35 @@
 }
 
 body {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-family: ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol,"Noto Color Emoji";
     background: #e8e8e8;
     background-image:
         radial-gradient(circle at 1px 1px, rgba(0,0,0,0.15) 1px, transparent 0);
     background-size: 20px 20px;
     height: 100vh;
     overflow: hidden;
-    cursor: crosshair;
+    cursor: none;
 }
 
-/* Custom cursor styling */
-.wii-menu::before {
-    content: "🎯";
+/* Custom cursor */
+.custom-cursor {
     position: fixed;
-    top: 0;
-    left: 0;
-    font-size: 20px;
+    width: 20px;
+    height: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 50%;
     pointer-events: none;
     z-index: 9999;
     transition: all 0.1s ease;
+    transform: translate(-50%, -50%);
 }
+
+.custom-cursor.hover {
+    width: 40px;
+    height: 40px;
+    background: rgba(0, 0, 0, 0.5);
+}
+
 
 .wii-menu {
     width: 100vw;
@@ -37,17 +45,50 @@ body {
     position: relative;
     padding: 40px;
     padding-left: 60px;
+    overflow: hidden;
 }
 
 .channels-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 275px);
     grid-template-rows: repeat(3, 1fr);
-    gap: 20px;
-    width: calc(100vw - 120px);
-    max-width: 1200px;
-    height: 450px;
-    margin-bottom: 80px;
+    gap: 25px;
+    width: 1350px;
+    height: 550px;
+    margin-bottom: 120px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-width: calc(100vw - 120px);
+    position: relative;
+}
+
+.channels-grid {
+    --fade-offset: 0px;
+    --left-fade-offset: -200px;
+}
+
+.channels-grid::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: var(--fade-offset);
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to left, #e8e8e8, transparent);
+    pointer-events: none;
+    z-index: 10;
+}
+
+.channels-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: var(--left-fade-offset);
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, #e8e8e8, transparent);
+    pointer-events: none;
+    z-index: 10;
 }
 
 .channel-card {
@@ -80,19 +121,19 @@ body {
 .channel-content {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    align-items: flex-start;
+    justify-content: flex-end;
+    text-align: left;
     padding: 20px;
     width: 100%;
     height: 100%;
 }
 
 .channel-text {
-    font-size: 14px;
+    font-size: 18px;
     color: #333;
     font-weight: 500;
-    margin-top: 10px;
+    margin-top: 0;
 }
 
 .channel-icon {
@@ -108,6 +149,7 @@ body {
     color: white;
     border: 2px solid rgba(255, 255, 255, 0.3);
     transition: all 0.3s ease;
+    align-self: flex-start;
 }
 
 .channel-card:hover .channel-icon {
@@ -198,14 +240,11 @@ body {
 /* Bottom profile section */
 .bottom-profile {
     position: absolute;
-    bottom: 100px;
-    left: 60px;
-    text-align: left;
-    background: rgba(255, 255, 255, 0.8);
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
     padding: 15px 25px;
-    border-radius: 15px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .profile-name {
@@ -242,15 +281,21 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #555;
     cursor: pointer;
     transition: all 0.3s ease;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
     border: 2px solid rgba(255, 255, 255, 0.5);
+    overflow: hidden;
 }
 
 .social-icon:hover {
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
     background: rgba(255, 255, 255, 1);
+}
+
+.social-img {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
 }
